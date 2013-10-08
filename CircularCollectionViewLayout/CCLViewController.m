@@ -47,6 +47,7 @@ static const float kCellHeight = 100.0f;
     [self.collectionView registerNib:[UINib nibWithNibName:@"CCLCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    [flowLayout setSectionInset:UIEdgeInsetsMake(10.0f, 10.0f, 10.0f, 10.0f)];
     [flowLayout setItemSize:CGSizeMake(kCellWidth, kCellHeight)];
     [flowLayout setMinimumInteritemSpacing:10.0f];
     [flowLayout setMinimumLineSpacing:10.0f];
