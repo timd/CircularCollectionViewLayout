@@ -13,7 +13,6 @@
 		22B2B735180411D7005D8697 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22B2B733180411D7005D8697 /* InfoPlist.strings */; };
 		22B2B737180411D7005D8697 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B2B736180411D7005D8697 /* main.m */; };
 		22B2B73B180411D7005D8697 /* CCLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B2B73A180411D7005D8697 /* CCLAppDelegate.m */; };
-		22B2B73E180411D7005D8697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B2B73C180411D7005D8697 /* Main.storyboard */; };
 		22B2B741180411D7005D8697 /* CCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B2B740180411D7005D8697 /* CCLViewController.m */; };
 		22B2B743180411D7005D8697 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B2B742180411D7005D8697 /* Images.xcassets */; };
 		22B2B74A180411D8005D8697 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B2B749180411D8005D8697 /* XCTest.framework */; };
@@ -21,6 +20,7 @@
 		22B2B74C180411D8005D8697 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B2B72E180411D7005D8697 /* UIKit.framework */; };
 		22B2B754180411D8005D8697 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22B2B752180411D8005D8697 /* InfoPlist.strings */; };
 		22B2B756180411D8005D8697 /* CircularCollectionViewLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B2B755180411D8005D8697 /* CircularCollectionViewLayoutTests.m */; };
+		22B2B7631804121E005D8697 /* CCLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B2B7621804121E005D8697 /* CCLViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		22B2B738180411D7005D8697 /* CircularCollectionViewLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircularCollectionViewLayout-Prefix.pch"; sourceTree = "<group>"; };
 		22B2B739180411D7005D8697 /* CCLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCLAppDelegate.h; sourceTree = "<group>"; };
 		22B2B73A180411D7005D8697 /* CCLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCLAppDelegate.m; sourceTree = "<group>"; };
-		22B2B73D180411D7005D8697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22B2B73F180411D7005D8697 /* CCLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCLViewController.h; sourceTree = "<group>"; };
 		22B2B740180411D7005D8697 /* CCLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCLViewController.m; sourceTree = "<group>"; };
 		22B2B742180411D7005D8697 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		22B2B751180411D8005D8697 /* CircularCollectionViewLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircularCollectionViewLayoutTests-Info.plist"; sourceTree = "<group>"; };
 		22B2B753180411D8005D8697 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22B2B755180411D8005D8697 /* CircularCollectionViewLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircularCollectionViewLayoutTests.m; sourceTree = "<group>"; };
+		22B2B7621804121E005D8697 /* CCLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCLViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +112,9 @@
 		22B2B730180411D7005D8697 /* CircularCollectionViewLayout */ = {
 			isa = PBXGroup;
 			children = (
-				22B2B739180411D7005D8697 /* CCLAppDelegate.h */,
-				22B2B73A180411D7005D8697 /* CCLAppDelegate.m */,
-				22B2B73C180411D7005D8697 /* Main.storyboard */,
-				22B2B73F180411D7005D8697 /* CCLViewController.h */,
-				22B2B740180411D7005D8697 /* CCLViewController.m */,
+				22B2B75F180411ED005D8697 /* App delegate */,
+				22B2B760180411F3005D8697 /* View controller */,
+				22B2B761180411FF005D8697 /* Layout */,
 				22B2B742180411D7005D8697 /* Images.xcassets */,
 				22B2B731180411D7005D8697 /* Supporting Files */,
 			);
@@ -150,6 +148,32 @@
 				22B2B752180411D8005D8697 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22B2B75F180411ED005D8697 /* App delegate */ = {
+			isa = PBXGroup;
+			children = (
+				22B2B739180411D7005D8697 /* CCLAppDelegate.h */,
+				22B2B73A180411D7005D8697 /* CCLAppDelegate.m */,
+			);
+			name = "App delegate";
+			sourceTree = "<group>";
+		};
+		22B2B760180411F3005D8697 /* View controller */ = {
+			isa = PBXGroup;
+			children = (
+				22B2B73F180411D7005D8697 /* CCLViewController.h */,
+				22B2B740180411D7005D8697 /* CCLViewController.m */,
+				22B2B7621804121E005D8697 /* CCLViewController.xib */,
+			);
+			name = "View controller";
+			sourceTree = "<group>";
+		};
+		22B2B761180411FF005D8697 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B2B743180411D7005D8697 /* Images.xcassets in Resources */,
+				22B2B7631804121E005D8697 /* CCLViewController.xib in Resources */,
 				22B2B735180411D7005D8697 /* InfoPlist.strings in Resources */,
-				22B2B73E180411D7005D8697 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +305,6 @@
 				22B2B734180411D7005D8697 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		22B2B73C180411D7005D8697 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22B2B73D180411D7005D8697 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		22B2B752180411D8005D8697 /* InfoPlist.strings */ = {

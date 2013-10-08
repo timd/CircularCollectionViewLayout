@@ -7,12 +7,17 @@
 //
 
 #import "CCLAppDelegate.h"
+#import "CCLViewController.h"
 
 @implementation CCLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    CCLViewController *viewController = [[CCLViewController alloc] initWithNibName:@"CCLViewController" bundle:nil];
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
